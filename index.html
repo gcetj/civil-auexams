@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+        <title>Exam Paper upload</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" type="text/javascript" defer></script>
+        <style>
+            body {
+                padding: 0px;
+                margin: 0px;
+            }
+        </style>
+        <script src="https://use.fontawesome.com/4b61038db8.js"></script>
+    </head>
+    <body>
+        <div style="background-color: bisque; padding: 20px 0px; margin-bottom: 20px;">
+            <h1 style="text-align: center;">Welcome to GCETJ</h1>
+            <h3 style="text-align: center;">Apr/May 2021 Examinations & Nov/Dec-2020 Reexaminations</h3>
+            <h3 style="text-align: center;">Department of Civil</h3>
+        </div>
+        <div style="color: red;display: none;" id="errMessage">
+            <p style="text-align: center;">You can upload your answer scripts within 1 hour after the exam ends.</p>
+        </div>
+        
+        
+        <form id="form" style="align-items: center; text-align: center;">
+            <p>All fields are mandatory. Instructions <a href="./instructions.html">here</a></p>
+            <label for="filename">Register Number: </label>
+            <input name="filename" id="filename" type="number" required><br><br>
+            <label for="year" id="yearLabel">Year: </label>
+            <select name="year" id="year" width="50px">
+                <option value="none">--Select one--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="4">Passed out</option>
+            </select><br><br>
+            <label for="regulation">Regulation: </label>
+            <select name="regulation" id="regulation" onChange="changeRegulation()">
+                <option value="none">--Select one--</option>
+                <option value="2013">2013</option>
+                <option value="2017">2017</option>
+            </select><br><br>
+            <!-- <label for="dept" id="deptLabel">Department: </label>
+            <select name="dept" id="dept" onchange="deptChange()">
+                <option value="none">--Select one--</option>
+                <option value="ec">ECE</option>
+                <option value="ee">EEE</option>
+                <option value="me">Mechanical</option>
+                <option value="ce">Civil</option>
+                <option value="cs">CSE</option>
+            </select><br><br> -->
+            <label for ="subCode">Subject Code: </label>
+            <select name="subCode" id="subCode">
+                <option value="none">--Select one--</option>
+            </select><br><br>
+            <!-- <input name="subCode" id="subCode" type="text" required><br><br> -->
+            <label for="file">Upload your answer paper here: </label>
+            <input name="file" id="uploadfile" type="file" required><br>
+            <p style="color: red;">Maximum file size - 5 MB (Use DocScanner Application to Scan and Compress PDF)</p><br><br>
+            <input id="submit" type="submit">
+          </form>
+            <div style="margin-top: 50px;display: none; text-align: center;" id="uploadMessage">
+                <p style="text-align: center;"><b>Uploading... Please Wait</b></p>
+            </div>
+          <div style="margin-top: 50px;">
+              <p style="text-align: center;"><b>Wait for sometime for confirmation message after submission!</b></p>
+          </div>
+          
+    </body>
+</html>
